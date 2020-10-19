@@ -1,0 +1,285 @@
+﻿
+/* HTML webpage stylings*/
+
+header {
+    background-size: cover;
+    background: #add8e6;
+}
+
+    header img#logoimg {
+        height: 180px;
+    }
+    /* Styles for the Reactjs portion and welcome bar/grey bar*/
+:root {
+    --main-bg-color: #FFFFFF; /* White */
+    --secondary-bg-color: #000000; /* Black */
+    --highlight-color: #ADD8E6; /* Light Blue*/
+    --header-separator-color: #D3D3D3; /*>Light Grey*/
+    --main-text-color: #000000; /* Black */
+    --secondary-text-color: #FFFFFF; /* White*/
+    --hover-text-color: #FFA500; /* Orange */
+    --savings-color: #00AA00; /* Medium Green*/
+}
+
+#WelcomeBar {
+    background-color: var(--header-separator-color);
+    width: 100%;
+    height: 30px;
+    margin-top: -30px;
+
+}
+#SunMoonDisplay {
+    float: right;
+    width: 150px;
+    height: 150px;
+}
+
+#Welcome {
+    padding: 0px;
+    margin-top: 0px;
+    padding-left: 10px;
+    font-size: 20px;
+    float: left;
+}
+
+#WelcomeTime {
+    float: right;
+    font-size: 20px;
+}
+
+
+
+footer {
+    background-color: #000000;
+    color: white;
+    font-family: arial, san-serif font-size: 30px;
+    text-align: left;
+}
+
+header {
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+    footer {
+        padding: 30px;
+        margin-bottom: 0px;
+    }
+/* Navigation Code/Resets*/ 
+
+{
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+    .nav li {
+        display: inline;
+    }
+
+    .nav a {
+        color: black;
+        font-weight: bold;
+        display: inline-block;
+        padding: 15px;
+        text-decoration: none;
+    }
+
+.nav a:hover {
+    text-decoration: none;
+}
+
+<style type="text/css" >
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+}
+
+.product-cards {
+    margin-bottom: 30px;
+}
+
+nav {
+    margin-top: 20px;
+    background: white;
+}
+
+    nav ul {
+        display: flex;
+        list-style: none;
+        align-items: center;
+        justify-content: center;
+    }
+
+    nav a {
+        color: white;
+        font-weight: bold;
+        display: block;
+        padding: 15px;
+        text-decoration: none;
+    }
+
+        nav a:hover {
+            color: ##ffa500;
+        }
+
+
+.intro {
+    margin: 30px 0;
+    padding: 0 10px;
+}
+
+    .intro h1 {
+        text-align:left;
+        margin-bottom: 15px;
+    }
+
+    .intro p {
+        text-align: left;
+        line-height: 1.5;
+    }
+
+@keyframes productCards {
+    from {
+        background-color: white;
+        color: black;
+        border-width: 1px;
+        padding: 15px;
+    }
+
+    to {
+        background-color: black;
+        color: white;
+        border-width: 5px;
+        padding: 11px;
+    }
+}
+
+.product-card {
+    text-align:left;
+    border: 3px solid gray;
+    padding: 15px;
+    margin: 10px;
+}
+
+    .product-card:hover {
+        animation: productCards 2s;
+        color: white;
+        border: 5px solid black;
+        background: black;
+    }
+
+    .product-card a {
+        color: black;
+        text-decoration: none;
+    }
+
+    .product-card:hover a {
+        color: white;
+    }
+
+    .product-card img {
+        width: 100%;
+    }
+
+    .product-card h2 {
+        margin: 30px 0 15px;
+    }
+
+    .product-card p {
+        line-height: 1.5;
+    }
+
+.original-price {
+    color: grey;
+    text-transform: uppercase;
+}
+
+.current-price span {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.saving {
+    color: green;
+}
+
+@media (min-width: 768px) {
+    header {
+        align-items: center;
+        display: flex;
+    }
+
+    nav {
+        background: transparent;
+        margin-top: 0;
+        margin-left: 30px;
+    }
+
+        nav a {
+            color: black;
+            position: relative;
+            top: 0;
+            transition: top .5s, color .5s;
+        }
+
+            nav a:hover {
+                top: -10px;
+                text-decoration: none;
+                color: red;
+            }
+
+    .intro {
+        width: 50%;
+    }
+
+    .product-cards {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+    }
+
+    .product-card {
+        display: inline-block;
+    }
+}
+}
+
+@media only print {
+    nav {
+        display: none;
+    }
+}
+
+button.link {
+    background: none;
+    border: none;
+    line-height: 2em;
+    font-size: 15px;
+    text-decoration: underline;
+    display: block;
+    margin-left: 10px;
+    margin-right: auto;
+}
+
+.Events {
+    line-height: 2em;
+    font-size: 15px;
+    margin-left: 20px;
+    margin-right: auto
+}
