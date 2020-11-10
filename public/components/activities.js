@@ -278,7 +278,7 @@ class Activities extends React.Component {
 }
 
 ReactDOM.render(
-    React.createElement("form", {id: 'ContactForm', method: 'post', action: 'formsubmit.php' },
+    React.createElement("form", {id: 'ContactForm', method: 'post', action: 'confirm.php' },
         React.createElement('h3', null, "First Name"),
         React.createElement("input", {type: 'text', name: 'firstName', placeholder: 'First Name', required: true}), //First Name
         
