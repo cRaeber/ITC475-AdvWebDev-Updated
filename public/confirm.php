@@ -1,5 +1,16 @@
 
         <?php
+
+		$servername = "localhost";
+        $username = "root";
+        $password = "";
+        $dbname = "testdb";
+        $conn = new mysqli($servername, $username, $password, $dbname);
+
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
         #First Name
         if (isset($_POST['firstName'])) $firstName = $_POST['firstName'];
         else $firstName = "(Not entered)";
@@ -51,6 +62,19 @@
         $activity4 = array_pop($activities);
         $activity5 = array_pop($activities);
 
+		$sql = "INSERT INTO clients (FirstName, LastName, Phone, Email, Adults, Children, Destination, Date, Activity1, Activity2, Activity3, Activity4, Activity5)
+	VALUES ('$firstName', '$lastName', '$phoneNumber', '$emailAddress', '$numberOfAdults', '$numberOfChildren', '$destination', '$tripDate', '$activity1', '$activity2', '$activity3', '$activity4', '$activity5')";
+
+        function submitData($conn,$sql){
+            if ($conn->query($sql) === TRUE) {
+                echo "<p>An agent will be in touch with you soon!</p>";
+            } else {
+                echo "Error: " . $sql . "<br>" . $conn->error;
+            }
+        }
+
+		submitData($conn, $sql);
+
         echo <<<_START
 		<html>
 			<head>
@@ -75,6 +99,7 @@
 						<li><a href="mt_homepage.html">Home</a></li>
 						<li><a href="mt_aboutpage.html">About Us</a></li>
 						<li><a href="mt_contactclient.html">Contact An Agent</a></li>
+						<li><a href="mt_admin.html"> Admin Ports</a></li>
 					</ul>
 				 </nav>
 				<article>
